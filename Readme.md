@@ -2,9 +2,11 @@ This project is an application skeleton for a typical [AngularJS][angularjs] web
 to quickly bootstrap your angular webapp projects and dev environment for these projects.
 
 - Develop an Angularjs based basic address book application
-- The application should present the available contacts in two Toggle different views.
+- The application should present the available contacts in two toggle different views.
 
 ## Contributor
-Jeremy springer
+Jeremy Springer
 
+
+## View application
 click to view application https://tiy-jeremyspringer-adressbook-work.surge.sh/#!/address
