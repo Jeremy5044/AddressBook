@@ -1,0 +1,75 @@
+<!-- start of Toggle btn -->
+<div class="fixed-btn">
+	<div class="btn btn-danger-cards" ng-click="hideMe();"><span>Click for Table  View</span></div>
+	<div class="btn btn-danger-table" ng-click="showMe();"><span>Click for Card View</span></div>
+</div>
+<!-- End of Toggle btn -->
+<!-- start of AddressBook table container -->
+<div ng-hide="show" class="container table-row" ng-controller="AddressCtrl">
+	<div class="row">
+		<input type="text" placeholder="Search AddressBook" ng-model="searchText">
+		<br>
+		<br>
+		<table class="table">
+			 <thead>
+		     <tr>
+					 <th>CustomerID</th>
+					 <th>CompanyName</th>
+					 <th>ContactName</th>
+					 <th>ContactTitle</th>
+					 <th>Address</th>
+					 <th>City</th>
+					 <th>Email</th>
+					 <th>PostalCode</th>
+					 <th>Country</th>
+					 <th>Phone</th>
+					 <th>Fax</th>
+				 </tr>
+			</thead>
+			 <tbody>
+				 <tr ng-repeat="contact in contact | filter:searchText">
+					 	<td data-label="Customer ID">{{contact.CustomerID}}</td>
+						<td data-label="Company Name">{{contact.CompanyName}}</td>
+						<td data-label="Contact Name">{{contact.ContactName}}</td>
+						<td data-label="Contact Title">{{contact.ContactTitle}}</td>
+					  <td data-label="Address">{{contact.Address}}</td>
+						<td data-label="City">{{contact.City}}</td>
+					  <td data-label="Email">{{contact.Email}}</td>
+						<td data-label="Postal Code">{{contact.PostalCode}}</td>
+						<td data-label="Country">{{contact.Country}}</td>
+					  <td data-label="Phone">{{contact.Phone}}</td>
+						<td data-label="Fax">{{contact.Fax}}</td>
+				 </tr>
+			  </tbody>
+		 </table>
+		</div>
+</div>
+<!-- End of table container -->
+<!-- Start of Adreessbook cards container -->
+<div ng-show="show" class="container cards-wrapper">
+	<input type="text" placeholder="Search address" ng-model="searchText">
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-md-6 col-lg-4" ng-repeat="contact in contact | filter:searchText">
+			<div class="business-card" ng-model="card">
+				<div class="title">
+					<h4>{{contact.CompanyName}}<i class="fa fa-modx"></i></h4>
+				</div>
+				<div class="finer-print">
+					<p><strong>Customer ID:</strong> {{contact.CustomerID}}</p>
+					<p><strong>Contact Name:</strong> {{contact.ContactName}}</p>
+					<p><strong>Contact Title:</strong> {{contact.ContactTitle}}</p>
+					<p><strong>Address:</strong> {{contact.Address}}</p>
+					<p><strong>City:</strong> {{contact.City}}</p>
+					<p><strong>Email:</strong> {{contact.Email}}</p>
+					<p><strong>PostalCode:</strong> {{contact.PostalCode}}</p>
+					<p><strong>Country:</strong> {{contact.Country}}</p>
+					<p><strong>Phone:</strong> {{contact.Phone}}</p>
+					<p><strong>Fax:</strong> {{contact.Fax}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END of Adreessbook cards container -->
