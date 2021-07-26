@@ -1,0 +1,79 @@
+
+body{
+  background: aliceblue;
+}
+
+p{
+  margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px gray;
+
+}
+
+
+
+.finer-print {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 0%;
+}
+
+
+.business-card {
+  position: relative;
+  background: #eeeeec;
+  color: #2e3436;
+  width: 414px;
+  height: 440px;
+  font-size: 20px;
+  border-bottom: 2px solid #d3d7df;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 1px #000;
+  margin-top: 5%;
+}
+
+.business-card .title {
+  background: #21406a;
+  color: #fff;
+  height: 45px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  border-top: 2px solid #21406a;
+  border-left: 2px solid #21406a;
+  border-radius: 14px 14px 0 0;
+  text-align: center;
+}
+@media only screen and (min-width: 768px){
+
+  .finer-print {
+      font-size: 15px;
+      text-align: center;
+      padding-top: 0%;
+  }
+
+
+  .business-card {
+    position: relative;
+    background: #eeeeec;
+    color: #2e3436;
+    width: 100%;
+    font-size: 20px;
+    border-bottom: 2px solid #d3d7df;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 1px #000;
+    margin-top: 5%;
+  }
+
+  .business-card .title {
+    background: #21406a;
+    color: #fff;
+    height: 45px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    border-top: 2px solid #21406a;
+    border-left: 2px solid #21406a;
+    border-radius: 14px 14px 0 0;
+    text-align: center;
+}
