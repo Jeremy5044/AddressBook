@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+}
+.table-row {
+	display: table-row;
+	max-height: 30000px;
+	height: 2550px;
+}
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+thead {
+	position: sticky;
+	top: 0px;
+}
+
+.table td, .table th {
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-size: 16px;
+}
+.table th {
+	background-color: #21406a;
+	color: #ffffff;
+}
+.table tbody tr:nth-child(even) {
+	background-color: #d1e8f5;
+}
+.table tbody tr:nth-child(even) {
+	background-color: #1c3e6975;
+	cursor: pointer;
+}
+.table tbody tr:nth-child(even):hover {
+	background-color: #1c3e69a6;
+}
+/* fixed toggle btn css */
+
+.fixed-btn {
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+}
+.btn-danger-table {
+	width: 50%;
+	float: left;
+	height: 50px;
+	background: #21406a;
+	border-radius: 0px;
+	border: solid 2px white;
+	color: #ffff;
+	font-size: 25px;
+}
+.btn-danger-cards {
+	width: 50%;
+	height: 50px;
+	background: #21406a;
+	border-radius: 0px;
+	border: solid 2px white;
+	color: #ffff;
+	font-size: 25px;
+}
+.btn-danger-cards:hover {
+	background: aliceblue;
+}
+.btn-danger-table:hover {
+	background: aliceblue;
+}
+/*responsive*/
+
+@media (max-width: 500px) {
+	.table th {
+		display: none;
+	}
+	.table, .table tbody, .table tr, .table td {
+		display: block;
+		width: 100%;
+	}
+	.table tr {
+		margin-bottom: 15px;
+	}
+	.table td {
+		padding-left: 50%;
+		text-align: left;
+		position: relative;
+	}
+	.table td::before {
+		content: attr(data-label);
+		position: absolute;
+		left: 0;
+		width: 50%;
+		padding-left: 15px;
+		font-size: 15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
